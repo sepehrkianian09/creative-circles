@@ -46,6 +46,7 @@ html {
 
     border: 1px solid;
     border-radius: 50%;
+    box-sizing: border-box;
 
     cursor: cell;
 
