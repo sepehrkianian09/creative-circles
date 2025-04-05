@@ -1,5 +1,7 @@
 // Get the element
 const clickableDiv = document.querySelector('.creative-circles>.content');
+console.log('xxxx');
+console.log(clickableDiv);
 
 /**
  * Greets a user by name and age
@@ -30,13 +32,15 @@ clickableDiv.addEventListener('click', (event) => {
     // Get the element that was clicked
     const clickedElement = event.target;
 
-    // Get the mouse position relative to the div
-    const mouseX = event.offsetX; // Horizontal position of the mouse inside the element
-    const mouseY = event.offsetY; // Vertical position of the mouse inside the element
+    if (clickedElement == clickableDiv) {
+        // Get the mouse position relative to the div
+        const mouseX = event.offsetX; // Horizontal position of the mouse inside the element
+        const mouseY = event.offsetY; // Vertical position of the mouse inside the element
 
-    // Log the element and position of the click
-    console.log('Element clicked:', clickedElement);
-    console.log('Mouse position (X, Y):', mouseX, mouseY);
+        // Log the element and position of the click
+        console.log('Element clicked:', clickedElement);
+        console.log('Mouse position (X, Y):', mouseX, mouseY);
 
-    clickedElement.appendChild(createElementAtCoordinates({ x: mouseX, y: mouseY }, { translate_x: mouseX - clickedElement.clientWidth / 2, translate_y: mouseY - clickedElement.clientHeight / 2 }))
+        clickedElement.appendChild(createElementAtCoordinates({ x: mouseX, y: mouseY }, { translate_x: mouseX - clickedElement.clientWidth / 2, translate_y: mouseY - clickedElement.clientHeight / 2 }))
+    }
 });
