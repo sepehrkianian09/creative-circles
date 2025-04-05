@@ -19,7 +19,7 @@
     background-color: lightcoral;
     text-align: center;
     line-height: 100px;
-    animation: 4s linear 0s infinite normal none running moveInCircle;
+    animation: 12s linear 0s infinite normal none running moveInCircle;
 
     cursor: url('delete-pointer.png'), pointer;
 }
