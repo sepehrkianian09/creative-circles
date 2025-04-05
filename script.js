@@ -9,18 +9,20 @@ console.log(clickableDiv);
  * @param {number} Y - coordinate Y
  * @returns {HTMLElement} The created element locating there
  */
-function createElementAtCoordinates({ x, y }, { translate_x, translate_y }) {
+function createElementAtCoordinates(clickedElement, { mouseX, mouseY }) {
+    const translate = { x: mouseX - clickedElement.clientWidth / 2, y: mouseY - clickedElement.clientHeight / 2 };
+
     // Create a new div element
     const newElement = document.createElement('div');
 
     // Set the style to position the element at the specified coordinates
     newElement.classList.add('really-creative-circle');
-    newElement.style = `--translate-x: ${translate_x}px;
-    --translate-y: ${translate_y}px;`;
+    newElement.style = `--translate-x: ${translate.x}px;
+    --translate-y: ${translate.y}px;`;
+
     newElement.textContent = "hello";
     newElement.addEventListener('click', (event) => {
         const clickedElement = event.target;
-
         clickedElement.remove();
     });
 
@@ -41,6 +43,6 @@ clickableDiv.addEventListener('click', (event) => {
         console.log('Element clicked:', clickedElement);
         console.log('Mouse position (X, Y):', mouseX, mouseY);
 
-        clickedElement.appendChild(createElementAtCoordinates({ x: mouseX, y: mouseY }, { translate_x: mouseX - clickedElement.clientWidth / 2, translate_y: mouseY - clickedElement.clientHeight / 2 }))
+        clickedElement.appendChild(createElementAtCoordinates(clickedElement, { mouseX, mouseY }))
     }
 });
