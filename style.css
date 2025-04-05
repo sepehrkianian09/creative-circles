@@ -7,13 +7,6 @@ html {
     margin: 0;
 }
 
-.disable-animation {
-    animation: none !important;
-    /* Disable animations */
-    transition: none !important;
-    /* Disable transitions */
-}
-
 .creative-circles {
     background-color: yellow;
 }
@@ -41,7 +34,6 @@ html {
 
     position: relative;
     margin: auto;
-    animation: rotateAnimation 4s linear infinite;
 
     border: 1px solid;
     border-radius: 50%;
