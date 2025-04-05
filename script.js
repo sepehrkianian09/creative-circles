@@ -16,6 +16,11 @@ function createElementAtCoordinates({ x, y }, { translate_x, translate_y }) {
     newElement.style = `--translate-x: ${translate_x}px;
     --translate-y: ${translate_y}px;`;
     newElement.textContent = "hello";
+    newElement.addEventListener('click', (event) => {
+        const clickedElement = event.target;
+
+        clickedElement.remove();
+    });
 
     return newElement;
 }
