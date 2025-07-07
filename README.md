@@ -1,5 +1,7 @@
 # Creative Circles
-You can view the snapshot of this page in the picture below. This repo represents a beautiful page containing creative circles. It consists of two groups of circles: 1. orbit circles, and 2. really creative circles
+You can view the snapshot of this page in the picture below. You can also visit the page online via this [Address](https://creative-circles-eee4f.web.app/).
+
+This project represents a beautiful page containing creative circles. It consists of two groups of circles: 1. orbit circles, and 2. really creative circles
 
 <img src="./assets/snapshot.png" alt="Page Snapshot" width="700px" style="display: flex; margin: 20px auto;"/>
 
