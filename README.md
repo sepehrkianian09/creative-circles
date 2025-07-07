@@ -1,5 +1,8 @@
 # Creative Circles
-This repo represents a beautiful page containing creative circles. It consists of two groups of circles: 1. orbit circles, and 2. really creative circles
+You can view the snapshot of this page in the picture below. This repo represents a beautiful page containing creative circles. It consists of two groups of circles: 1. orbit circles, and 2. really creative circles
+
+<img src="./assets/snapshot.png" alt="Page Snapshot" width="700px" style="display: flex; margin: 20px auto;"/>
+
 
 ## Orbit Circles
 This contains one red circle moving from the center of the page to the outside. it also has a black border
